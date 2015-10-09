@@ -285,7 +285,7 @@
     <instance objName="obj_dirt" x="960" y="224" name="inst_E26AABF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="896" y="224" name="inst_74352271" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="992" y="224" name="inst_85BAF851" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Boss" x="1513" y="241" name="inst_44CAF70B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Boss" x="1506" y="241" name="inst_44CAF70B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="60" y="110" name="inst_00BDF43A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Entrance" x="35" y="80" name="inst_88867359" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="1056" y="288" name="inst_03021F83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -337,7 +337,7 @@
     <instance objName="obj_dirt" x="416" y="192" name="inst_81E59987" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="448" y="192" name="inst_CCB47479" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="480" y="192" name="inst_3936BEF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Exit" x="1466" y="240" name="inst_B583DC67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ExitVictory" x="1493" y="240" name="inst_8A4D4071" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="336" y="256" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_25654E62" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

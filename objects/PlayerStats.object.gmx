@@ -37,6 +37,8 @@ highscore = 0;
 time = 0;
 stoptime = false;
 strvic = "Time: " + string(floor(time));
+killedspider = false;
+gotboots = false;
 </string>
           </argument>
         </arguments>
@@ -78,7 +80,7 @@ else {
     strvic = "Time: " + string(floor(time));
     
      // Calculate the score
-        score = floor((PlayerStats.sapphires*100) - (PlayerStats.time*2));
+        score = floor((PlayerStats.sapphires*50) - (PlayerStats.time*2));
         
         if (score &lt; 0)
             score = 0;
