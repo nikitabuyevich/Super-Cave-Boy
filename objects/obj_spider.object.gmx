@@ -62,8 +62,30 @@ state = spider_idle_state;
             <string>/// Destroy the spider
 event_inherited();
 
+
 // Play the spider die sound
 audio_play_sound(snd_spider, 3, false);
+
+if (PlayerStats.killedspider = false){
+    with (instance_create(x, y, Explosion)){
+            image_speed = 0.5;
+            image_xscale = 2;
+            image_yscale = 2;
+        }
+    instance_create(x, y, HeartUpgrade);
+    instance_create(x, y, obj_spider);
+    PlayerStats.killedspider = true;
+} else {
+    obj_player.H_SPEED = -20;
+    obj_player.V_SPEED = -20;
+    audio_play_sound(snd_spider_kill, 3, false);
+    with (instance_create(x, y, Explosion)){
+        image_speed = 0.5;
+        image_xscale = 2;
+        image_yscale = 2;
+    }
+    instance_create(x, y, SpeedUpgrade);
+}
 </string>
           </argument>
         </arguments>

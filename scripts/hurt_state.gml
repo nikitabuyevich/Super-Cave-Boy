@@ -29,6 +29,8 @@ if (alarm[0] == room_speed) { // if 1 second passed, give movement
             audio_stop_sound(snd_boss_music);
         if (audio_is_playing(snd_victory))
             audio_stop_sound(snd_victory);
+        if (audio_is_playing(snd_pre_boss))
+            audio_stop_sound(snd_pre_boss);
         room_restart();
     }
     state = move_state;

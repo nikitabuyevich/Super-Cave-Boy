@@ -28,7 +28,7 @@
             <string>/// Initialize the player object
 
 //CONSTANT VARIABLES
-CONST_SPEED = 8;
+CONST_SPEED = 6;
 CONST_ACCEL = 2;
 H_SPEED = 0;
 V_SPEED = 0;
@@ -145,6 +145,65 @@ if ((audio_is_playing(snd_victory))){
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="HeartUpgrade">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Upgrade speed
+PlayerStats.maxhp ++;
+PlayerStats.hp = PlayerStats.maxhp;
+
+audio_play_sound(snd_item_pickup, 4, false);
+
+with (other)
+    instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="SpeedUpgrade">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Upgrade speed
+PlayerStats.CONST_SPEED = 10;
+PlayerStats.gotboots = true;
+audio_play_sound(snd_item_pickup, 4, false);
+
+with (other)
+    instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="Boss">
       <action>
         <libid>1</libid>
@@ -166,6 +225,61 @@ if ((audio_is_playing(snd_victory))){
 if (INVINCIBLE == 0)
     // Take damage
     take_damage();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="Explosion">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="Gold">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Collect the sapphire
+
+PlayerStats.sapphires += 5;
+with (other)
+    instance_destroy();
+
+audio_emit_gold = audio_emitter_create();
+audio_emitter_gain(audio_emit_gold, 0.35);
+audio_emitter_pitch(audio_emit_gold, 1.25);
+audio_play_sound_on(audio_emit_gold, snd_gold, false, 10);
+
 </string>
           </argument>
         </arguments>
@@ -303,6 +417,7 @@ if (door &amp;&amp; other.visible == true) {
     y = yprevious;
     state = exit_state;
     audio_stop_sound(snd_jump);
+    sprite_index = spr_player_exit;
     audio_play_sound(snd_exit, 4, false);
 }
 </string>

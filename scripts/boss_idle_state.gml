@@ -2,7 +2,7 @@
 var dis = point_distance(x, y, obj_player.x, obj_player.y);
 
 if (!atboss) {
-    audio_emitter_gain(audio_em, 0.3);
+    audio_emitter_gain(audio_em, 0.5);
     audio_play_sound_on(audio_em, snd_pre_boss, true, 10);
     
     atboss = true;

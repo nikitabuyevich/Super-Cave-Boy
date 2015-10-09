@@ -15,6 +15,7 @@ if (gamepad_is_connected(gp_id)) {
     right = gamepad_axis_value(gp_id, gp_axislh) > thresh;
     left = gamepad_axis_value(gp_id, gp_axislh) < -thresh;
     up = gamepad_button_check_pressed(gp_id, gp_face1);
+    door = gamepad_button_check_pressed(gp_id, gp_face2);
     up_release = gamepad_button_check_released(gp_id, gp_face1);
     down = gamepad_axis_value(gp_id, gp_axislv) > thresh;
 }

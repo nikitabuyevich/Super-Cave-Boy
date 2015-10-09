@@ -1,6 +1,5 @@
 /// move_state();
 
-
 // Implementing gravity
 if (!place_meeting(x, y+1, obj_solid)){
     V_SPEED += CONST_GRAVITY;
@@ -28,7 +27,24 @@ if (!place_meeting(x, y+1, obj_solid)){
         sprite_index = spr_player_idle;
     } else {
         sprite_index = spr_player_walk;
-        image_speed = 0.6;
+        if (PlayerStats.gotboots == true)
+            image_speed = 1.2;
+        else
+            image_speed = 0.6;
+        if (PlayerStats.gotboots == true){
+            repeat (irandom_range(1, 3)) {
+            var rand_x = irandom_range(-4, 4);
+            var rand_y = irandom_range(-4, 4);
+            
+            instance_create(obj_player.x-8+rand_x, obj_player.y+9+rand_y, SpeedParticles);
+            if (!audio_is_playing(snd_moving)){
+                audio_emit = audio_emitter_create();
+                audio_emitter_gain(audio_emit, 0.10);
+                audio_emitter_pitch(audio_emit, 2);
+                audio_play_sound_on(audio_emit, snd_moving, false, 10);
+            }
+        }
+}
     }
 }   
 

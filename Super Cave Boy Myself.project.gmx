@@ -17,6 +17,10 @@
     <sound>sound\snd_boss_music</sound>
     <sound>sound\snd_pre_boss</sound>
     <sound>sound\snd_victory</sound>
+    <sound>sound\snd_item_pickup</sound>
+    <sound>sound\snd_spider_kill</sound>
+    <sound>sound\snd_moving</sound>
+    <sound>sound\snd_gold</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player">
@@ -33,6 +37,7 @@
       <sprite>sprites\spr_solid</sprite>
       <sprite>sprites\spr_entrance</sprite>
       <sprite>sprites\spr_exit</sprite>
+      <sprite>sprites\spr_exit_victory</sprite>
       <sprite>sprites\spr_dirt_top</sprite>
       <sprite>sprites\spr_dirt_edge</sprite>
       <sprite>sprites\spr_sapphire</sprite>
@@ -48,14 +53,21 @@
     <sprites name="GUI Icons">
       <sprite>sprites\spr_heart</sprite>
       <sprite>sprites\spr_sapphire_gui</sprite>
+      <sprite>sprites\spr_gold</sprite>
     </sprites>
     <sprites name="Effects">
       <sprite>sprites\spr_blood</sprite>
       <sprite>sprites\spr_sapphire_chunk</sprite>
       <sprite>sprites\spr_lava_bubbles</sprite>
+      <sprite>sprites\spr_speed</sprite>
+      <sprite>sprites\spr_explosion</sprite>
     </sprites>
     <sprites name="Boss">
       <sprite>sprites\spr_boss</sprite>
+    </sprites>
+    <sprites name="Items">
+      <sprite>sprites\spr_boots</sprite>
+      <sprite>sprites\spr_heart_container</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -115,6 +127,7 @@
       <object>objects\Exit</object>
       <object>objects\Background</object>
       <object>objects\Lava</object>
+      <object>objects\ExitVictory</object>
     </objects>
     <objects name="Enemies">
       <object>objects\EnemyParent</object>
@@ -125,21 +138,29 @@
     <objects name="Effects">
       <object>objects\Blood</object>
       <object>objects\Sapphire</object>
+      <object>objects\Gold</object>
       <object>objects\SapphireChunk</object>
       <object>objects\FireBubble</object>
+      <object>objects\Explosion</object>
+      <object>objects\SpeedParticles</object>
     </objects>
     <objects name="Boss">
       <object>objects\Boss</object>
     </objects>
+    <objects name="Items">
+      <object>objects\SpeedUpgrade</object>
+      <object>objects\HeartUpgrade</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
-    <room>rooms\rm_highscore</room>
     <room>rooms\rm_one</room>
     <room>rooms\rm_two</room>
     <room>rooms\rm_three</room>
     <room>rooms\rm_four</room>
     <room>rooms\rm_five</room>
+    <room>rooms\rm_six</room>
+    <room>rooms\rm_seven</room>
     <room>rooms\rm_boss</room>
   </rooms>
   <help>
